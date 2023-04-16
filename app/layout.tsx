@@ -1,7 +1,7 @@
 import { Nunito } from "next/font/google";
 
 import "./globals.css";
-import Navbar from "../components/navbar/Navbar.tsx";
+import Navbar from "../components/navbar/Navbar";
 
 export const metadata = {
     title: "HomeBookie",
