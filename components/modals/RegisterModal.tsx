@@ -6,6 +6,7 @@ import { FcGoogle } from "react-icons/fc";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import useRegisterModal from "@/hooks/useRegisterModal";
 import Modal from "./Modal";
+import axios from "axios";
 
 const RegisterModal = () => {
     const registerModal = useRegisterModal();
