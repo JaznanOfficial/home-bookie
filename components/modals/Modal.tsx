@@ -13,7 +13,7 @@ interface ModalProps {
     footer?: React.ReactElement;
     actionLabel: string;
     disabled?: boolean;
-    secondaryAction?: () => void;
+    secondaryAction: () => void;
     secondaryActionLabel?: string;
 }
 const Modal: React.FC<ModalProps> = ({
@@ -43,7 +43,7 @@ const Modal: React.FC<ModalProps> = ({
         setTimeout(() => {
             onClose();
         }, 300);
-    }, [disabled, onClose, isOpen]);
+    }, [disabled, onClose]);
 
     const handleSubmit = useCallback(() => {
         if (disabled) {
