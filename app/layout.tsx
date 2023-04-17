@@ -3,7 +3,7 @@ import { Nunito } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/navbar/Navbar";
 import ClientOnly from "@/components/ClientOnly";
-import Modal from "@/components/modals/Modal";
+import RegisterModal from "@/components/modals/RegisterModal";
 
 export const metadata = {
     title: "HomeBookie",
@@ -19,7 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <html lang="en">
             <body className={font.className}>
                 <ClientOnly>
-                    <Modal actionLabel={"Submit"} title={"Hello world"} isOpen />
+                    <RegisterModal />
                     <Navbar />
                 </ClientOnly>
                 {children}
