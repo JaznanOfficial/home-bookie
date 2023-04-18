@@ -1,6 +1,6 @@
 "use client";
 
-import { FieldErrors, FieldValue, UseFormRegister } from "react-hook-form";
+import { FieldErrors, FieldValues, UseFormRegister } from "react-hook-form";
 import { BiDollar } from "react-icons/bi";
 
 interface InputProps {
@@ -10,7 +10,7 @@ interface InputProps {
     disabled?: boolean;
     formatPrice?: boolean;
     required?: boolean;
-    register?: UseFormRegister<FieldValue>;
+    register: UseFormRegister<FieldValues>;
     errors: FieldErrors;
 }
 
