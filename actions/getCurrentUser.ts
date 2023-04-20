@@ -22,10 +22,12 @@ const getCurrentUser = async () => {
                 email: session?.user?.email as string,
             },
         });
-        currentUser.createdAt = currentUser.createdAt.toString();
-        currentUser.updatedAt = currentUser.updatedAt.toString();
+        if (currentUser) {
+            currentUser.createdAt = currentUser.createdAt.toString();
+            currentUser.updatedAt = currentUser.updatedAt.toString();
+        }
         // console.log(currentUser);
-        return currentUser && currentUser;
+        return currentUser;
     } catch (error: any) {
         console.log(error);
         return null;
