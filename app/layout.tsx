@@ -19,7 +19,7 @@ const font = Nunito({
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
     const currentUser = await getCurrentUser();
-    console.log(currentUser);
+    // console.log(currentUser);
 
     return (
         <html lang="en">
