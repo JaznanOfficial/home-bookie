@@ -25,7 +25,7 @@ const getCurrentUser = async () => {
         currentUser.createdAt = currentUser.createdAt.toString();
         currentUser.updatedAt = currentUser.updatedAt.toString();
         // console.log(currentUser);
-        return currentUser;
+        return currentUser && currentUser;
     } catch (error: any) {
         console.log(error);
         return null;
