@@ -22,12 +22,16 @@ const getCurrentUser = async () => {
                 email: session?.user?.email as string,
             },
         });
-        if (currentUser) {
-            currentUser.createdAt = new Date(currentUser.createdAt);
-            currentUser.updatedAt = new Date(currentUser.updatedAt);
+        if (!currentUser) {
+            return null;
         }
         // console.log(currentUser);
-        return currentUser;
+        return {
+            ...currentUser,
+            createdAt: currentUser.createdAt.toISOString(),
+            updatedAt: currentUser.updatedAt.toISOString(),
+            emailVerified: currentUser.emailVerified?.toISOString() || null,
+        };
     } catch (error: any) {
         console.log(error);
         return null;
