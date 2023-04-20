@@ -28,7 +28,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                     <ToasterProvider />
                     <RegisterModal />
                     <LoginModal />
-                    <Navbar currentUser={currentUser} />
+                    <Navbar currentUser={currentUser ? currentUser : undefined} />
                 </ClientOnly>
                 {children}
             </body>
