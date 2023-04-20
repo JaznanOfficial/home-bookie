@@ -46,6 +46,8 @@ export const authOptions: AuthOptions = {
                     throw new Error("Invalid credentials");
                 }
 
+                // console.log(user);
+
                 return user;
             },
         }),

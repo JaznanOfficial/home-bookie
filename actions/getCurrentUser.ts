@@ -11,7 +11,7 @@ export const getSession = async () => {
 const getCurrentUser = async () => {
     try {
         const session = await getSession();
-        // console.log(prisma);
+        console.log(session);
 
         if (!session?.user?.email) {
             return null;
