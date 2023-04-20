@@ -23,8 +23,8 @@ const getCurrentUser = async () => {
             },
         });
         if (currentUser) {
-            currentUser.createdAt = currentUser.createdAt.toString();
-            currentUser.updatedAt = currentUser.updatedAt.toString();
+            currentUser.createdAt = new Date(currentUser.createdAt);
+            currentUser.updatedAt = new Date(currentUser.updatedAt);
         }
         // console.log(currentUser);
         return currentUser;
